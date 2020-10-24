@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "script.py", "script.py\script.py.pyproj", "{20799B4E-C82B-4E45-B41E-D2A97BD9ADF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20799B4E-C82B-4E45-B41E-D2A97BD9ADF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20799B4E-C82B-4E45-B41E-D2A97BD9ADF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B6B4ECE-3C76-44B0-AE2E-2605CBC52F85}
+	EndGlobalSection
+EndGlobal
