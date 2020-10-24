@@ -11,28 +11,36 @@ class Graph:
     self.graph_dict[from_node.value].add_edge(to_node.value, weight)
     self.graph_dict[to_node.value].add_edge(from_node.value, weight)
 
+    # Allows for game to explore routes of graph. 
   def explore(self):
     print("Exploring the graph....\n")
     #FILL IN EXPLORE METHOD BELOW
     current_room = 'entrance'
     path_total = 0
     print("\nStarting off at {0}\n".format(current_room))
+    # Checking to make sure that current_room is not the treasure room which is the final room.
     while current_room != 'treasure room':
         node = self.graph_dict[current_room]
+        # Gathering all connected rooms, and weights for the current_room node.
         for connected_room, weight in node.edges.items():
             key = connected_room[:1]
             print("enter {0} for {1}: {2} cost".format(key, connected_room, weight))
+        # Gathers the valid choices for user to pick to move to next room.
         valid_choices = [room[:1] for room in node.edges.keys()]
         print("\nYou have accumulated: {0} cost".format(path_total))
+        # Ask for user input for what room to move for using only first letter.
         choice = input("\nWhich room do you move to? ")
+        # if user choice is not a valid choice print what are the valid choices.
         if choice not in valid_choices:
             print("please select from these letters: {0}".format(valid_choices))
+        # if user choice is a valid choice move to new room, change current_room to new room. and add weight of path to path_total.
         else:
             for room in node.edges.keys():
                 if room.startswith(choice):
                     current_room = room
                     path_total += node.edges[room]
             print("\n*** You have chosen: {0} ***\n".format(current_room))
+            # Continue until made it to Treasure Room
     print("Made it to the treasure room with {0} cost".format(path_total))
     
   
